@@ -112,5 +112,14 @@ button {
 </form>
 
 <script>
-    
+    document.getElementById('propertyForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert('Formulário enviado com sucesso!');
+});
+
+document.getElementById('propertyForm').addEventListener('reset', function(event) {
+    if (!confirm('Tem certeza de que deseja limpar o formulário?')) {
+        event.preventDefault();
+    }
+});
 </script>
